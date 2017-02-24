@@ -47,9 +47,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'status' => 'required|max:10',
-        ]);
+        $this->taskValidate($request);
         
         $task = new Task;
         $task->status = $request->status;
@@ -98,9 +96,7 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'status' => 'required|max:10',
-        ]);
+        $this->taskValidate($request);
         
         $task = Task::where('id', $id);
         $task->update(['status' => $request->status]);
@@ -121,5 +117,12 @@ class TasksController extends Controller
         $task->delete();
 
         return redirect('/');
+    }
+    
+    public function taskValidate ($request)
+    {
+        $this->validate($request, [
+            'status' => 'required|max:10',
+        ]);
     }
 }
