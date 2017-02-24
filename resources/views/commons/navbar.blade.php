@@ -12,7 +12,9 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>{!! link_to_route('tasks.create', '新規タスク追加ページ') !!}</li>
+                    <li>{!! link_to_route('tasks.create', '新規タスク追加') !!}</li>
+                     <li><a href="#">新規登録</a></li>
+                    <li><a href="#">ログイン</a></li>
                 </ul>
             </div>
         </div>
