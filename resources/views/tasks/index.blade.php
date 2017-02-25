@@ -25,6 +25,8 @@
 </table>
 @endif
 
+{!! $tasks->render() !!}
+
 {!! link_to_route('tasks.create', '新規タスク追加ページ', null, ['class' => 'btn btn-primary']) !!}
 
 @endsection

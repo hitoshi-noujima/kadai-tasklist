@@ -16,7 +16,7 @@
             <div class="form-group">
                 {!! Form::label('status', 'ステータス:', ['class' => 'col-xs-3']) !!}
                 <div class="col-xs-9">
-                    {!! Form::select('status', ['未完了' => '未完了', '進行中' => '進行中', '完了' => '完了'], '未完了', ['class' => 'form-control']) !!}
+                    {!! Form::select('status', ['未完了' => '未完了', '進行中' => '進行中', '完了' => '完了'], null, ['class' => 'form-control']) !!}
                 </div>
             </div>
             {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
