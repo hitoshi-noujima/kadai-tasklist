@@ -2,8 +2,7 @@
 
 @section('content')
     @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        
+       
         <h1>{{ $user->name }}のタスク一覧</h1>
 
         @if (count($tasks) > 0)

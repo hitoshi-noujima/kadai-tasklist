@@ -1,3 +1,4 @@
+<?php $user = Auth::user(); ?>
 <header>
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
